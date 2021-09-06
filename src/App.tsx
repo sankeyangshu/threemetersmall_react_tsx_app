@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-09-06 09:56:36
  * @LastEditors: 王振
- * @LastEditTime: 2021-09-06 10:45:18
+ * @LastEditTime: 2021-09-06 13:45:53
  */
 import React, { useEffect, useState, Fragment } from 'react';
 import routes from '@/router';
@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <Fragment>
-      <ConfigProvider primaryColor={'#007fff'} locale={zhCN}>
+      <ConfigProvider primaryColor={'#3fbb47'} locale={zhCN}>
         <Switch>
           {routes.map((route) => (
             <Route exact key={route.path} path={route.path}>

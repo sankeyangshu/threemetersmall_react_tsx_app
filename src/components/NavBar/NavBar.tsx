@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-08-31 10:41:00
  * @LastEditors: 王振
- * @LastEditTime: 2021-08-31 10:45:37
+ * @LastEditTime: 2021-09-06 13:42:12
  */
 
 import React, { useState } from 'react';
@@ -30,9 +30,10 @@ const NavBar: React.FC<NavBarType> = ({ showNav }) => {
 
   return (
     <TabBar visible={showNav} className={moduleCss.tab} activeKey={activeKey} onChange={changeTab}>
-      <TabBar.Item itemKey="/" title="账单" icon={<CustomIcon type="zhangdan" />} />
-      <TabBar.Item itemKey="/data" title="统计" icon={<CustomIcon type="tongji" />} />
-      <TabBar.Item itemKey="/user" title="我的" icon={<CustomIcon type="wode" />} />
+      <TabBar.Item itemKey="/" title="首页" icon={<CustomIcon type="iconshouye" />} />
+      <TabBar.Item itemKey="/data" title="分类" icon={<CustomIcon type="iconfenlei" />} />
+      <TabBar.Item itemKey="/data" title="购物车" icon={<CustomIcon type="icongouwuche" />} />
+      <TabBar.Item itemKey="/user" title="我的" icon={<CustomIcon type="icongerenzhongxin" />} />
     </TabBar>
   );
 };
