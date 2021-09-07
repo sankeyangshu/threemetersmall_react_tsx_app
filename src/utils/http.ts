@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-09-06 13:55:47
  * @LastEditors: 王振
- * @LastEditTime: 2021-09-06 13:55:48
+ * @LastEditTime: 2021-09-07 11:07:22
  */
 
 // 1.导入封装好的axios实例
@@ -43,7 +43,7 @@ const post: Post = async (url, params, config) => {
     config.data = params;
   }
   const response = await request(config);
-  return response.data;
+  return response;
 };
 
 /**

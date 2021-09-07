@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-09-06 13:56:27
  * @LastEditors: 王振
- * @LastEditTime: 2021-09-06 13:56:27
+ * @LastEditTime: 2021-09-07 11:07:15
  */
 
 import { AxiosRequestConfig } from 'axios';
@@ -12,7 +12,7 @@ import { AxiosRequestConfig } from 'axios';
  * 网络请求响应格式，T 是具体的接口返回类型数据
  */
 interface CustomSuccessData<T> {
-  code: number;
+  code?: number;
   msg?: string;
   message?: string;
   data?: T;
