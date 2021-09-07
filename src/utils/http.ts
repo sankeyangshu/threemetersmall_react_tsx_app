@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-09-06 13:55:47
  * @LastEditors: 王振
- * @LastEditTime: 2021-09-07 11:07:22
+ * @LastEditTime: 2021-09-07 15:30:40
  */
 
 // 1.导入封装好的axios实例
@@ -25,7 +25,7 @@ const get: Get = async (url, params, config) => {
     config.params = params;
   }
   const response = await request(config);
-  return response.data;
+  return response;
 };
 
 /**
@@ -61,7 +61,7 @@ const patch: Patch = async (url, params, config) => {
     config.data = params;
   }
   const response = await request(config);
-  return response.data;
+  return response;
 };
 
 /**
@@ -79,7 +79,7 @@ const destroy: Delete = async (url, params, config) => {
     config.params = params;
   }
   const response = await request(config);
-  return response.data;
+  return response;
 };
 
 // 包裹请求方法的容器,使用 http 统一调用

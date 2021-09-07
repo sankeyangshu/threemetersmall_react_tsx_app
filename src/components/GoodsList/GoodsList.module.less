@@ -1,0 +1,41 @@
+@import '../../styles/mixins.less';
+@import '../../styles/viriables.less';
+.goods__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .goods {
+    width: 49%;
+    margin-bottom: 10px;
+    background-color: #fff;
+    .goods__img {
+      margin-bottom: 8px;
+      padding-top: 8px;
+      .center();
+    }
+
+    .goods__title {
+      width: 90%;
+      margin-bottom: 8px;
+      padding-left: 16px;
+      overflow: hidden;
+      font-size: 16px;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: @fontColor;
+      .ellipsis-2();
+    }
+
+    .goods__price {
+      width: 100%;
+      margin-bottom: 10px;
+      padding-left: 16px;
+      font-size: 16px;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: @priceColor;
+      .ellipsis();
+    }
+  }
+}

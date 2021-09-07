@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-09-06 13:56:27
  * @LastEditors: 王振
- * @LastEditTime: 2021-09-07 11:07:15
+ * @LastEditTime: 2021-09-07 15:19:46
  */
 
 import { AxiosRequestConfig } from 'axios';
@@ -15,7 +15,7 @@ interface CustomSuccessData<T> {
   code?: number;
   msg?: string;
   message?: string;
-  data?: T;
+  data: T;
   [keys: string]: any;
 }
 
