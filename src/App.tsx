@@ -3,15 +3,16 @@
  * @Author: 王振
  * @Date: 2021-09-06 09:56:36
  * @LastEditors: 王振
- * @LastEditTime: 2021-09-06 14:11:46
+ * @LastEditTime: 2021-09-07 10:27:25
  */
 import React, { useEffect, useState, Fragment } from 'react';
 import routes from '@/router';
-import { Switch, Route, useLocation } from 'react-router-dom';
+import { Switch, useLocation } from 'react-router-dom';
 import { ConfigProvider } from 'zarm';
 import zhCN from 'zarm/lib/config-provider/locale/zh_CN';
 import 'zarm/dist/zarm.css';
 import NavBar from '@/components/NavBar';
+import FrontendAuth from '@/components/FrontendAuth';
 
 const App = () => {
   const location = useLocation(); // 获取location实例
@@ -28,11 +29,8 @@ const App = () => {
     <Fragment>
       <ConfigProvider primaryColor={'#3fbb47'} locale={zhCN}>
         <Switch>
-          {routes.map((route) => (
-            <Route exact key={route.path} path={route.path}>
-              <route.component />
-            </Route>
-          ))}
+          {/* 使用高阶组件实现路由守卫功能 */}
+          <FrontendAuth config={routes} />
         </Switch>
       </ConfigProvider>
       <NavBar showNav={showNav} />
