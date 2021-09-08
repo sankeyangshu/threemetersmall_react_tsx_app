@@ -1,0 +1,65 @@
+@import '../../styles/viriables.less';
+.category {
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 50px;
+  right: 0;
+  background-color: @bgColor;
+  .category__left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    width: 30%;
+    background: #f6f6f9;
+    .left__total {
+      padding-bottom: 120px;
+      .left_active {
+        background: #fff;
+        position: relative;
+        color: @themeColor;
+      }
+
+      li {
+        padding: 30px 8px;
+        box-sizing: border-box;
+        font-size: 16px;
+        text-align: center;
+        border-bottom: 1px solid #ececec;
+      }
+    }
+  }
+  .category__right {
+    width: 70%;
+    background: #fff;
+    position: absolute;
+    margin-left: 3px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    .right__total {
+      overflow: hidden;
+      padding-bottom: 120px;
+      .category__right__grid {
+        width: 33.33%;
+        margin-top: 10px;
+        float: left;
+        text-align: center;
+        box-sizing: border-box;
+        position: relative;
+        span {
+          display: block;
+          height: 30px;
+          line-height: 30px;
+          overflow: hidden;
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

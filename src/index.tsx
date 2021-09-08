@@ -3,10 +3,11 @@
  * @Author: 王振
  * @Date: 2021-09-06 09:56:36
  * @LastEditors: 王振
- * @LastEditTime: 2021-09-06 10:42:27
+ * @LastEditTime: 2021-09-08 09:25:01
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css'; // 统一各个浏览器之间的显示差异
 import 'lib-flexible/flexible';
 import './styles/base.css';
 import App from './App';

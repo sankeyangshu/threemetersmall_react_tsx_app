@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-09-06 10:48:34
  * @LastEditors: 王振
- * @LastEditTime: 2021-09-07 15:31:55
+ * @LastEditTime: 2021-09-08 08:56:11
  */
 import React, { useEffect, useState } from 'react';
 import moduleCss from './Home.module.less';
@@ -19,7 +19,6 @@ const Home = () => {
     'https://static.zhongan.com/website/health/zarm/images/banners/2.png',
     'https://static.zhongan.com/website/health/zarm/images/banners/3.png',
   ]; // 轮播图
-  // eslint-disable-next-line no-unused-vars
   const [goodsList, setGoodsList] = useState<goodsType[]>([]); // 商品卡片列表数据
 
   useEffect(() => {

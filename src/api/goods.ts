@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-09-07 14:55:54
  * @LastEditors: 王振
- * @LastEditTime: 2021-09-07 15:17:30
+ * @LastEditTime: 2021-09-08 09:01:02
  */
 
 // 导入http
@@ -36,10 +36,10 @@ interface goodsListResponse {
  * @param {goodsListParams} params 请求参数-分类id，页面，每页多少条
  * @return {*}
  */
-export function getGoodsListAPI(
+export async function getGoodsListAPI(
   params: goodsListParams
 ): Promise<CustomSuccessData<goodsListResponse>> {
-  return http.get('/api/goods/goodslist', params);
+  return await http.get('/api/goods/goodslist', params);
 }
 
 /**
@@ -47,6 +47,8 @@ export function getGoodsListAPI(
  * @param {goodsDetailParams} params 请求参数，商品id
  * @return {*}
  */
-export function getGoodsDetailAPI(params: goodsDetailParams): Promise<CustomSuccessData<any>> {
-  return http.get('/api/goods/goodsdetail', params);
+export async function getGoodsDetailAPI(
+  params: goodsDetailParams
+): Promise<CustomSuccessData<any>> {
+  return await http.get('/api/goods/goodsdetail', params);
 }
