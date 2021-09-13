@@ -3,7 +3,7 @@
  * @Author: 王振
  * @Date: 2021-09-06 13:55:16
  * @LastEditors: 王振
- * @LastEditTime: 2021-09-07 15:13:26
+ * @LastEditTime: 2021-09-13 09:34:36
  */
 
 // 导入axios
@@ -22,6 +22,14 @@ const instance = axios.create({
 // 2. 配置请求头，全局的 axios 默认值
 instance.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'; // 流程组件 content-type
 instance.defaults.headers.patch['Content-Type'] = 'application/json;charset=UTF-8'; // 流程组件 content-type
+
+// token失效，清除用户信息并返回登录界面
+const clearAll = () => {
+  store.dispatch({
+    type: 'SET_USERINFO',
+    payload: {},
+  });
+};
 
 // 3.添加一个请求拦截器
 instance.interceptors.request.use(
@@ -70,8 +78,12 @@ instance.interceptors.response.use(
     // // 超时处理
     if (JSON.stringify(error).includes('Network Error')) {
       Toast.show('网络超时');
+      // 清除登录信息
+      clearAll();
     } else {
       Toast.show('服务器连接失败');
+      // 清除登录信息
+      clearAll();
     }
     console.info(error);
     return Promise.reject(error);
