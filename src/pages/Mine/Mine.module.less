@@ -1,0 +1,71 @@
+@import '../../styles/viriables.less';
+.mine {
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 50px;
+  right: 0;
+  background-color: @bgColor;
+  .total {
+    width: 100%;
+    margin-bottom: 100px;
+    position: relative;
+    .personal__center {
+      width: 100%;
+      height: 200px;
+      background-color: #3fbb47;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      &__avatarImg {
+        margin-left: 40px;
+      }
+
+      &__nickname {
+        margin-left: 10px;
+        font-size: 16px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: @nickNameColor;
+      }
+    }
+    .order {
+      width: 90%;
+      height: 130px;
+      background-color: #fff;
+      position: absolute;
+      top: 150px;
+      left: 18px;
+
+      .total__order {
+        height: 44px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+      }
+
+      .grid__order {
+        height: 86px;
+        display: flex;
+        flex-direction: row;
+        .grid {
+          width: 25%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          &__title {
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
